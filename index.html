@@ -10,71 +10,84 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
     }
 
     body {
-      background: #0b0b0b;
+      font-family: Arial, sans-serif;
+      background: #090909;
       color: white;
+      padding-bottom: 70px;
     }
 
     header {
-      padding: 20px;
+      padding: 18px;
       background: #111;
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    header h1 {
+    .logo {
       color: #e8b84a;
-      font-size: 28px;
+      font-size: 20px;
+      font-weight: bold;
     }
 
-    header p {
-      color: #aaa;
-      margin-top: 5px;
+    .menu {
+      font-size: 24px;
     }
 
     .hero {
-      padding: 50px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #171717, #30250e);
+      padding: 55px 20px;
+      background: linear-gradient(135deg, #181818, #3b2c0d);
     }
 
-    .hero h2 {
-      font-size: 34px;
+    .live {
+      display: inline-block;
+      background: #d62828;
+      padding: 7px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
       margin-bottom: 15px;
     }
 
     .hero p {
       color: #ccc;
+      line-height: 1.5;
       margin-bottom: 25px;
     }
 
     .button {
       display: inline-block;
-      padding: 14px 25px;
       background: #e8b84a;
       color: #000;
-      text-decoration: none;
+      padding: 14px 22px;
       border-radius: 8px;
+      text-decoration: none;
       font-weight: bold;
     }
 
-    .section {
-      padding: 30px 20px;
+    section {
+      padding: 30px 18px;
     }
 
-    .section h2 {
-      margin-bottom: 20px;
+    section h2 {
+      margin-bottom: 18px;
       color: #e8b84a;
     }
 
     .card {
-      background: #171717;
+      background: #161616;
+      border: 1px solid #292929;
+      border-radius: 12px;
       padding: 20px;
       margin-bottom: 15px;
-      border-radius: 12px;
-      border: 1px solid #292929;
     }
 
     .card h3 {
@@ -86,11 +99,43 @@
       line-height: 1.5;
     }
 
-    footer {
-      text-align: center;
-      padding: 25px;
+    .card button {
+      margin-top: 15px;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      background: #e8b84a;
+      font-weight: bold;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 65px;
       background: #111;
-      color: #777;
+      border-top: 1px solid #292929;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .bottom-nav a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .bottom-nav a:first-child {
+      color: #e8b84a;
+    }
+
+    .icon {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 3px;
     }
   </style>
 </head>
@@ -98,38 +143,83 @@
 <body>
 
   <header>
-    <h1>DECO WISDOM Live App</h1>
-    <p>Live • Events • Video Vault</p>
+    <div class="logo">DECO WISDOM</div>
+    <div class="menu">☰</div>
   </header>
 
-  <section class="hero">
-    <h2>Welcome to Deco Wisdom Live App</h2>
-    <p>Watch live events, discover exclusive content and access the video vault.</p>
-    <a href="#events" class="button">Explore Events</a>
-  </section>
+  <div class="hero">
+    <span class="live">● LIVE & EVENTS</span>
 
-  <section class="section" id="events">
+    <h1>Experience It Live.</h1>
+
+    <p>
+      Watch live experiences, discover upcoming events,
+      purchase tickets and explore exclusive video content.
+    </p>
+
+    <a href="#events" class="button">Explore Events</a>
+  </div>
+
+  <section id="events">
     <h2>Upcoming Events</h2>
 
     <div class="card">
-      <h3>Live Event</h3>
-      <p>Stay tuned for upcoming Deco Wisdom live experiences.</p>
+      <h3>Featured Live Event</h3>
+      <p>
+        Your next unforgettable Deco Wisdom experience.
+        Event information will appear here.
+      </p>
+      <button>View Event</button>
     </div>
 
     <div class="card">
-      <h3>Exclusive Videos</h3>
-      <p>Premium video content will appear here.</p>
-    </div>
-
-    <div class="card">
-      <h3>Subscriptions</h3>
-      <p>Subscription features will be added to the platform.</p>
+      <h3>Upcoming Event</h3>
+      <p>
+        Stay tuned for upcoming live events and experiences.
+      </p>
+      <button>Get Tickets</button>
     </div>
   </section>
 
-  <footer>
-    © 2026 Deco Wisdom Live App. All rights reserved.
-  </footer>
+  <section>
+    <h2>Video Vault</h2>
+
+    <div class="card">
+      <h3>Exclusive Content</h3>
+      <p>
+        Access premium videos and previously recorded
+        Deco Wisdom experiences.
+      </p>
+      <button>Explore Vault</button>
+    </div>
+  </section>
+
+  <div class="bottom-nav">
+    <a href="#">
+      <span class="icon">⌂</span>
+      Home
+    </a>
+
+    <a href="#events">
+      <span class="icon">🔴</span>
+      Live
+    </a>
+
+    <a href="#events">
+      <span class="icon">🎟</span>
+      Tickets
+    </a>
+
+    <a href="#">
+      <span class="icon">🎬</span>
+      Vault
+    </a>
+
+    <a href="#">
+      <span class="icon">👤</span>
+      Account
+    </a>
+  </div>
 
 </body>
 </html>
