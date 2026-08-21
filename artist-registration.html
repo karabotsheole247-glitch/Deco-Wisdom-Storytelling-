@@ -119,6 +119,27 @@
     </button>
 
   </div>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+  import {
+    getFirestore,
+    collection,
+    addDoc,
+    serverTimestamp
+  } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
 
+  const firebaseConfig = {
+    apiKey: "AIzaSyDHGXnyDrv3IOBDAIbKTd1fpiIaHNAn25Q",
+    authDomain: "video-platform-9056b.firebaseapp.com",
+    projectId: "video-platform-9056b",
+    storageBucket: "video-platform-9056b.firebasestorage.app",
+    messagingSenderId: "150988203312",
+    appId: "1:150988203312:web:f75167e732fa24dfcc94f5",
+    measurementId: "G-HDJWK0EPQ4"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+        </script>
 </body>
 </html>
